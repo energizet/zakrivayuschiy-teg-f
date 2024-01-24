@@ -33,6 +33,7 @@
     background-attachment: fixed;
     color: var(--alt-color);
     font-size: 18px;
+    fill: var(--alt-color);
 }
 
 .header {
@@ -351,10 +352,6 @@
     z-index: 1;
 }
 
-.main__save-icon > use {
-    color: var(--alt-color);
-}
-
 @media (width <= 375px) {
     .main__save {
         flex-direction: column;
@@ -367,12 +364,17 @@
     }
 }
 
+#dialog-id {
+    background: var(--main-color);
+    color: inherit;
+}
+
 #dialog-id::backdrop {
     background-color: rgb(0 0 0 / 75%);
 }
 
 #dialog-id[open] {
-    max-inline-size: 325px;
+    max-inline-size: 330px;
     display: flex;
     flex-direction: column;
     gap: 30px;
