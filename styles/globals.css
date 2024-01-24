@@ -5,11 +5,11 @@
 *,
 *::after,
 *::before {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+    margin: 0;
 }
 
 h1,
@@ -22,32 +22,93 @@ p,
 ul,
 ol,
 li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 a {
-  color: inherit;
+    color: inherit;
 }
 
 button,
 input {
-  color: currentColor;
-  font-family: inherit;
-  font-size: inherit;
+    appearance: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: currentColor;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 100%;
+    text-transform: inherit;
 }
 
 ul,
 ol {
-  list-style: none;
+    list-style: none;
+}
+
+img {
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    block-size: 100%;
+    inline-size: 100%;
 }
 
 .visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    block-size: 38px;
+    font-family: var(--alt-font);
+    font-size: 14px;
+    border: 2px solid var(--alt-color);
+    transition: box-shadow ease 0.3s, color ease 0.5s, fill ease 0.5s;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--alt-color);
+    scale: 0 1;
+    translate: -50%;
+    transition: scale ease-in-out 0.5s, translate ease-in-out 0.5s;
+}
+
+.button:hover {
+    color: var(--main-color);
+    fill: var(--main-color);
+}
+
+.button:hover::before {
+    scale: 1 1;
+    translate: 0;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:focus-visible {
+    outline: none;
+    box-shadow: 2px 2px 0 0 var(--alt-color);
+}
+
+.button__text {
+    z-index: 1;
 }
