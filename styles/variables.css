@@ -1,5 +1,5 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-:root{
+:root {
     --main-font: 'Inter';
     --alt-font: 'PressStart2P';
     --weight-main-font: 400;
@@ -12,7 +12,7 @@
     --alt-back-color-from: #1a1a1a;
     --alt-back-color-to: #e7e7e7;
 
-    --header-title-font-size: clamp(2.8125rem, 1.7487rem + 5.3191vw, 4.0625rem);;
+    --header-title-font-size: clamp(2.8125rem, 1.7487rem + 5.3191vw, 4.0625rem);
     --header-second-title-font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
 
     --header-padding-block-start: clamp(120px, calc(var(--header-title-font-size) * 2.5), 136px);

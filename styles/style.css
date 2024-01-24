@@ -24,7 +24,7 @@
     min-inline-size: 320px;
     min-block-size: 100dvb;
     font-family: var(--main-font), sans-serif;
-    font-weight: var(--weight-main-font);
+    font-variation-settings: 'wght' var(--weight-main-font);
     background-image: repeating-linear-gradient(90deg, var(--main-back-color), var(--main-back-color) 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(0deg, var(--main-back-color), var(--main-back-color) 2px, transparent 2px, transparent 4px),
     linear-gradient(0deg, var(--alt-back-color-from), var(--alt-back-color-from) 0.01%, var(--alt-back-color-to));
@@ -171,7 +171,7 @@
 }
 
 .card__title {
-    font-weight: 700;
+    font-variation-settings: 'wght' var(--weight-alt-font);
     padding: 5px 9px;
 }
 
